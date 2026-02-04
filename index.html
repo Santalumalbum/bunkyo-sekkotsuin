@@ -173,6 +173,30 @@
       height:260px;
       border:0;
     }
+    .hoursTable{
+      width:100%;
+      border-collapse:collapse;
+      font-size:14px;
+    }
+    .hoursTable th, .hoursTable td{
+      border-top:1px solid var(--line);
+      padding:8px 6px;
+      vertical-align:middle;
+    }
+    .hoursTable th{
+      text-align:left;
+      color:var(--muted);
+      font-weight:800;
+      width:34%;
+    }
+    .hoursTable td{
+      font-weight:900;
+    }
+    .hoursNote{
+      margin-top:8px;
+      font-size:12px;
+      color:var(--muted);
+    }
 
   </style>
 
@@ -240,8 +264,12 @@
 
       <div class="cards">
         <div class="card">
-          <div class="kv"><span class="muted">診療時間</span><b>9:00–13:00</b></div>
-          <div class="kv"><span class="muted">午後</span><b>15:00–19:00</b></div>
+          <div class="muted" style="font-weight:900; margin-bottom:6px;">診療時間</div>
+          <table class="hoursTable" aria-label="診療時間">
+            <tr><th>午前</th><td>9:00–13:00</td></tr>
+            <tr><th>午後</th><td>15:00–19:00</td></tr>
+          </table>
+          <div class="hoursNote">休診：木・日・祭日</div>
         </div>
         <div class="card">
           <div class="kv"><span class="muted">休診日</span><b>木・日・祭日</b></div>
