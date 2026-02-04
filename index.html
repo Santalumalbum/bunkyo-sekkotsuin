@@ -170,8 +170,14 @@
     .mapWrap iframe{
       display:block;
       width:100%;
-      height:260px;
+      height:320px;   /* PC/タブレットは少し高め */
       border:0;
+    }
+
+    @media (max-width: 860px){
+      .mapWrap iframe{
+        height:280px; /* スマホはほどよく */
+      }
     }
     .hoursTable{
       width:100%;
