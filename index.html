@@ -57,11 +57,25 @@
       content:"";
       position:absolute;
       inset:0;
-      background:url("assets/hero.jpg") center/cover no-repeat;
+
+      /* 保険：まずjpg */
+      background-image:url("assets/hero.jpg");
+
+      /* 対応ブラウザはwebp優先 */
+      background-image:image-set(
+        url("assets/hero.webp") type("image/webp"),
+        url("assets/hero.jpg")  type("image/jpeg")
+      );
+
+      background-position:center;
+      background-size:cover;
+      background-repeat:no-repeat;
+
       opacity:.18;              /* 写真の濃さ（0.12〜0.25で調整） */
       filter:saturate(1.05);    /* 少しだけ鮮やかに */
       transform:scale(1.02);    /* 端の見切れ防止 */
     }
+
 
     .hero > *{
       position:relative; /* 背景より前面に出す */
