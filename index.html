@@ -145,6 +145,20 @@
       .photoGrid{grid-template-columns:1fr 1fr}
       .hero h1{font-size:24px}
     }
+    .mapWrap{
+      margin-top:10px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      overflow:hidden;
+      background:#fff;
+    }
+    .mapWrap iframe{
+      display:block;
+      width:100%;
+      height:260px;
+      border:0;
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -269,10 +283,25 @@
         <a class="btn2" href="tel:0298010321">電話で相談する</a>
       </div>
       <div class="card" id="access">
+      <div class="card" id="access">
         <h2>アクセス</h2>
         <p class="muted" style="margin:0 0 8px;">茨城県土浦市文京町7-12（駐車場6台程度）</p>
-        <a class="btn2" href="https://www.google.com/maps/search/?api=1&query=%E8%8C%A8%E5%9F%8E%E7%9C%8C%E5%9C%9F%E6%B5%A6%E5%B8%82%E6%96%87%E4%BA%AC%E7%94%BA7-12" target="_blank" rel="noopener">Googleマップで開く</a>
+
+        <div class="mapWrap" aria-label="Googleマップ">
+          <iframe
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=%E8%8C%A8%E5%9F%8E%E7%9C%8C%E5%9C%9F%E6%B5%A6%E5%B8%82%E6%96%87%E4%BA%AC%E7%94%BA7-12&output=embed">
+          </iframe>
+        </div>
+
+        <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn2" href="https://www.google.com/maps/search/?api=1&query=%E8%8C%A8%E5%9F%8E%E7%9C%8C%E5%9C%9F%E6%B5%A6%E5%B8%82%E6%96%87%E4%BA%AC%E7%94%BA7-12" target="_blank" rel="noopener">
+            :contentReference[oaicite:0]{index=0}で開く
+          </a>
+        </div>
       </div>
+
     </div>
 
     <div class="foot">
